@@ -12,6 +12,9 @@ npm run start
 Open the app on your device
 Use the Expo Go app to scan the QR code displayed in the terminal or browser.
 
+Email: rydeu@email10p.org
+Password: 123456
+
 
 
 
