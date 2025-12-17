@@ -1,50 +1,43 @@
-# Welcome to your Expo app 👋
+# React Native Mobile App Assignment
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Project Overview
+This is a **React Native mobile application** built as part of a developer assignment. The app includes a login screen, a home screen with navigation, a custom date and time picker using **Moment.js**, and state management with **Redux**.  
 
-## Get started
+The app is developed using **React Native CExpo**.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+### Login Screen
+- Login screen with **username/email** and **password** input fields.
+- Login button authenticates the user via the API.
+- First-time users are directed to the login page.
 
-   ```bash
-   npm run start
-   ```
+### Home Screen
+- Displays user's information in the header.
+- Includes a **custom date and time picker** with a 6-month calendar built using **Moment.js**.
+- Users can select a date and time and see it displayed on the screen.
+- Logout button logs the user out and redirects them to the login screen.
 
-In the output, you'll find options to open the app in a
+### Navigation
+- Proper navigation implemented between **Login Screen** and **Home Screen** using **React Navigation**.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### State Management
+- State is managed with **Redux** to maintain user data, authentication status, and selected date/time.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## API Integration
 
-When you're ready, run:
+The login functionality is implemented using the following API:
 
 ```bash
-npm run reset-project
-```
+curl --location 'https://new-api-staging.rydeu.com/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "rydeu@email10p.org",
+    "password": "123456",
+    "type": "customer"
+}'
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
